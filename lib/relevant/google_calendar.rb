@@ -57,7 +57,7 @@ module Relevant
     end
     
     def events
-      event_options = {'calendar' => calendar.id, 'start-min' => Date.today.beginning_of_day.utc.xmlschema, 'start-max' => 6.days.from_now.end_of_day.utc.xmlschema}
+      event_options = {'start-min' => Date.today.beginning_of_day.utc.xmlschema, 'start-max' => 6.days.from_now.end_of_day.utc.xmlschema}, {'calendar' => calendar.id}
       @events ||= GCal4Ruby::Event.find(gcal, options[:search], event_options)
     end
     
