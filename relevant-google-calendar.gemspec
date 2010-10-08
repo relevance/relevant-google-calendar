@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{relevant-google-calendar}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jared Pace"]
-  s.date = %q{2010-09-29}
+  s.date = %q{2010-10-08}
   s.description = %q{Show upcoming events}
   s.email = %q{opensource@thinkrelevance.com}
   s.extra_rdoc_files = [

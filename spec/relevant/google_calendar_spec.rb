@@ -19,7 +19,7 @@ describe Relevant::GoogleCalendar do
     it 'calls out to the Google Calendar api' do
       widget.stubs(:calendar).returns(stub('calendar', :id => 123))
       expected_options = {
-        'calendar' => 123,
+        :calendar   => 123,
         'start-min' => Date.today.beginning_of_day.utc.xmlschema, 
         'start-max' => 6.days.from_now.end_of_day.utc.xmlschema
       }

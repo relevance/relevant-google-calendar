@@ -3,7 +3,7 @@ require 'gcal4ruby'
 
 module Relevant
   class GoogleCalendar
-    Version = "0.0.1"
+    Version = "0.0.2"
     include Relevant::Widget
     
     available_options :title => :string, :username => :string, :password => :password, :calendar => :string, :search => :string
@@ -57,7 +57,7 @@ module Relevant
     end
     
     def events
-      event_options = {'start-min' => Date.today.beginning_of_day.utc.xmlschema, 'start-max' => 6.days.from_now.end_of_day.utc.xmlschema}, {'calendar' => calendar.id}
+      event_options = {'start-min' => Date.today.beginning_of_day.utc.xmlschema, 'start-max' => 6.days.from_now.end_of_day.utc.xmlschema, :calendar => calendar.id}
       @events ||= GCal4Ruby::Event.find(gcal, options[:search], event_options)
     end
     
